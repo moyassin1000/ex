@@ -26,7 +26,7 @@ class PickedExcelFile {
 
 class ExcelService {
   Future<PickedExcelFile?> pickExcelFile() async {
-    final result = await FilePicker.pickFiles(
+    final result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
       allowedExtensions: const ['xlsx'],
       allowMultiple: false,
